@@ -13,9 +13,19 @@ import TomatoSeller from "../assets/images/home-images/tomato-seller.jpg";
 import CornFarmer from "../assets/images/home-images/corn-farmer.jpg";
 import FruitFarmer from "../assets/images/home-images/fruit-farmer.jpg";
 import RootCropFarmer from "../assets/images/home-images/root-crop-farmer.jpg";
+import LocalTruck from "../assets/images/home-images/truck.jpg";
 import { Sprout, Wheat } from "lucide-react";
-import { RiLeafFill, RiShoppingCartFill } from "react-icons/ri";
+import {
+  RiLeafFill,
+  RiShoppingCartFill,
+  RiTruckFill,
+  RiTimeFill,
+  RiMapPin2Fill,
+  RiShieldFill,
+  RiStarFill,
+} from "react-icons/ri";
 import { FaBoxes, FaCheese } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 const freshProducts = [
   {
@@ -148,7 +158,7 @@ const Home = () => {
             Fresh Deals Today
           </h2>
 
-          <div className="w-full md:w-[90%] mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="w-full mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
             {freshProducts.map((product) => (
               <div
                 key={product.id}
@@ -262,14 +272,14 @@ const Home = () => {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-25">
+      <section className="pb-25">
         <div className="max-w-[1200px] mx-auto  px-5 ">
-          <h2 className="text-center text-2xl font-bold mb-10">How It Works</h2>
+          <h2 className="text-center text-2xl  font-bold mb-8">How It Works</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:w-[80%] md:mx-auto  gap-6 md:gap-8 md:grid-cols-3">
             {/* COLUMN 1 */}
-            <div className="flex flex-col p-5 items-center bg-red-300">
-              <div className="w-full md:w-[70%] bg-yellow-300 p-4">
+            <div className="flex flex-col bg-white shadow-sm hover:shadow-md rounded-xl px-4 py-8 items-center ">
+              <div className="w-full md:w-[70%] ">
                 <div className="bg-blue-100 mx-auto w-15 h-15 rounded-full flex items-center justify-center">
                   <RiShoppingCartFill size={24} className="text-blue-600" />
                 </div>
@@ -281,19 +291,25 @@ const Home = () => {
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-blue-600 text-[13px] font-bold text-white">
                       1
                     </span>
-                    <span className="text-[15px] ">Browse fresh produce</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Browse fresh produce
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-blue-600 text-[13px] font-bold text-white">
                       2
                     </span>
-                    <span className="text-[15px] ">Place your order</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Place your order
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-blue-600 text-[13px] font-bold text-white">
                       3
                     </span>
-                    <span className="text-[15px] ">Track delivery</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Track delivery
+                    </span>
                   </p>
                 </div>
 
@@ -306,8 +322,8 @@ const Home = () => {
               </div>
             </div>
             {/* COLUMN 2 */}
-            <div className="flex flex-col p-5 items-center bg-red-300">
-              <div className="w-full md:w-[70%] bg-yellow-300 p-4">
+            <div className="flex flex-col bg-white shadow-sm hover:shadow-md rounded-xl px-4 py-8 items-center ">
+              <div className="w-full md:w-[70%]">
                 <div className="bg-green-100 mx-auto w-15 h-15 rounded-full flex items-center justify-center">
                   <RiLeafFill size={24} className="text-pri" />
                 </div>
@@ -319,19 +335,25 @@ const Home = () => {
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-pri text-[13px] font-bold text-white">
                       1
                     </span>
-                    <span className="text-[15px] ">List your produce</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      List your produce
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-pri text-[13px] font-bold text-white">
                       2
                     </span>
-                    <span className="text-[15px] ">Receive orders</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Receive orders
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-pri text-[13px] font-bold text-white">
                       3
                     </span>
-                    <span className="text-[15px] ">Get paid instantly</span>
+                    <span className="text-[15px] whitespace-nowrap">
+                      Get paid instantly
+                    </span>
                   </p>
                 </div>
 
@@ -344,10 +366,10 @@ const Home = () => {
               </div>
             </div>
             {/* COLUMN 3 */}
-            <div className="flex flex-col p-5 items-center bg-red-300">
-              <div className="w-full md:w-[70%] bg-yellow-300 p-4">
+            <div className="flex flex-col bg-white shadow-sm hover:shadow-md rounded-xl px-4 py-8  items-center ">
+              <div className="w-full md:w-[70%] ">
                 <div className="bg-orange-100 mx-auto w-15 h-15 rounded-full flex items-center justify-center">
-                  <RiLeafFill size={24} className="text-orange-600" />
+                  <RiTruckFill size={24} className="text-orange-600" />
                 </div>
                 <h4 className="font-semibold text-center my-2">
                   For Delivery Partners
@@ -355,23 +377,29 @@ const Home = () => {
 
                 {/* LIST */}
                 <div className="space-y-3">
-                  <p className="flex items-center gap-3">
+                  <p className="flex items-center  gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-orange-600 text-[13px] font-bold text-white">
                       1
                     </span>
-                    <span className="text-[15px] ">List your produce</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      List your produce
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-orange-600 text-[13px] font-bold text-white">
                       2
                     </span>
-                    <span className="text-[15px] ">Receive orders</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Receive orders
+                    </span>
                   </p>
                   <p className="flex items-center gap-3">
                     <span className="w-4.5 h-4.5 flex items-center justify-center rounded-full bg-orange-600 text-[13px] font-bold text-white">
                       3
                     </span>
-                    <span className="text-[15px] ">Get paid instantly</span>
+                    <span className="text-[15px] whitespace-nowrap ">
+                      Get paid instantly
+                    </span>
                   </p>
                 </div>
 
@@ -386,6 +414,166 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/*  */}
+      <section className="py-8 bg-light1">
+        <div className="max-w-[1200px] mx-auto  px-5 grid grid-cols-1 md:grid-cols-[56%_40%] items-center gap-8 md:gap-[4%]">
+          <div className="space-y-6">
+            <h3 className="font-bold text-2xl">
+              Track your order in real time and get fresh produce fast
+            </h3>
+            <p className=" md:text-lg">
+              Our delivery partners ensure your fresh produce reaches you
+              quickly while maintaining quality. Real-time tracking keeps you
+              informed every step of the way.
+            </p>
+            <ul className="space-y-4 mt-6 text-base">
+              <li className="flex items-center gap-4">
+                <span>
+                  <RiTimeFill className="text-pri" size={20} />
+                </span>
+                <span>Same-day delivery</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span>
+                  <RiShieldFill className="text-pri" size={20} />
+                </span>
+                <span>Temperature-controlled transport</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span>
+                  <RiMapPin2Fill className="text-pri" size={20} />
+                </span>
+                <span>GPS tracking for all deliveries</span>
+              </li>
+            </ul>
+
+            <Link to={"/signup"}>
+              <button className="py-3 mt-3 px-6 text-center font-semibold text-white rounded-md bg-pri transition duration-200 hover:bg-green-700 ">
+                Become a Delivery Partner
+              </button>
+            </Link>
+          </div>
+          {/* IMAGE */}
+          <div>
+            <img src={LocalTruck} alt="Truck Image" className="rounded-2xl" />
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-25">
+        <div className="px-5 mx-auto max-w-[1200px]">
+          <h2 className="text-center text-2xl font-bold mb-3">
+            Trusted by Thousands across Nigeria
+          </h2>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* STAT 1 */}
+            <div className="flex p-6 flex-col justify-center items-center">
+              <p className="text-3xl font-bold">5,000+</p>
+              <p className="mt-1">Active Farmers</p>
+            </div>
+            {/* STAT 2 */}
+            <div className="flex p-6 flex-col justify-center items-center">
+              <p className="text-3xl font-bold">10,000+</p>
+              <p className="mt-1">Orders Delivered</p>
+            </div>
+            {/* STAT 3 */}
+            <div className="flex p-6 flex-col justify-center items-center">
+              <p className="text-3xl font-bold">15</p>
+              <p className="mt-1">Cities Covered</p>
+            </div>
+          </div>
+
+          {/* TESTIMONIAL CARDS */}
+          <div className="grid mt-10 grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            {/* CARD 1 */}
+            <div className="p-5 rounded-lg space-y-5 bg-light1">
+              <div className="flex gap-1">
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+              </div>
+              <p className="my-5">
+                "FarmConnect has revolutionized how I buy fresh produce. Direct
+                from farmers, always fresh, fair prices."
+              </p>
+
+              <div className="flex items-center gap-3">
+                <img
+                  src={FruitFarmer}
+                  alt="Buyer Image"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <h4 className="font-bold">Adebayo Johnson</h4>
+                  <p className="text-sm">Restaurant Owner, Lagos</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="p-5 rounded-lg space-y-5 bg-light1">
+              <div className="flex gap-1">
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+              </div>
+              <p className="my-5">
+                "Finally, a platform that gives farmers fair prices. My income
+                has increased by 40% since joining."
+              </p>
+
+              <div className="flex items-center gap-3">
+                <img
+                  src={RootCropFarmer}
+                  alt="Farmer Image"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <h4 className="font-bold">Fatima Abdul</h4>
+                  <p className="text-sm">Farmer, Kano State</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="p-5 rounded-lg space-y-5 bg-light1">
+              <div className="flex gap-1">
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+                <RiStarFill size={20} className="text-yellow-500" />
+              </div>
+              <p className="my-5">
+                "Delivery is always on time and the produce quality is
+                exceptional. Highly recommended."
+              </p>
+
+              <div className="flex items-center gap-3">
+                <img
+                  src={CornFarmer}
+                  alt="Farmer Image"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <h4 className="font-bold">Chidi Okonkwo</h4>
+                  <p className="text-sm">Home Cook, Abuja</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 };
